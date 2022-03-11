@@ -33,6 +33,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Controllers\ZMZB\Partial\" />
     <Folder Include="Download\" />
   </ItemGroup>
 
