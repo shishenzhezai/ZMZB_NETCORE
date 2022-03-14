@@ -33,9 +33,9 @@ namespace TOP.ZMZB.Controllers
         }
 
         [HttpPost, Route("GetICD10List")]    
-        public async Task<IActionResult> GetICD10List([FromBody] PageDataOptions options)
+        public IActionResult GetICD10List([FromBody] PageDataOptions options)
         {
-            return Json(await Service.GetPageData(options));
+            return Json(Service.GetPageData(options));
         }
     }
 }
