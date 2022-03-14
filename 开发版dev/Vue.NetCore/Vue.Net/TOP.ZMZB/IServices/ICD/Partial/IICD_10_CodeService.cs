@@ -5,9 +5,12 @@ using VOL.Core.BaseProvider;
 using VOL.Entity.DomainModels;
 using VOL.Core.Utilities;
 using System.Linq.Expressions;
+
 namespace TOP.ZMZB.IServices
 {
     public partial interface IICD_10_CodeService
     {
+
+      
     }
  }
