@@ -11,6 +11,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.AspNetCore.Http;
 using VOL.Entity.DomainModels;
 using TOP.ZMZB.IServices;
+using VOL.Core.Enums;
+using VOL.Core.Filters;
 
 namespace TOP.ZMZB.Controllers
 {
@@ -28,6 +30,12 @@ namespace TOP.ZMZB.Controllers
         {
             _service = service;
             _httpContextAccessor = httpContextAccessor;
+        }
+
+        [HttpPost, Route("GetICD10List")]    
+        public async Task<IActionResult> GetICD10List([FromBody] PageDataOptions options)
+        {
+            return Json(await Service.GetPageData(options));
         }
     }
 }

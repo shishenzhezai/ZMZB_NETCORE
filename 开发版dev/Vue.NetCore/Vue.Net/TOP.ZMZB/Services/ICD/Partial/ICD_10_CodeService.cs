@@ -37,5 +37,15 @@ namespace TOP.ZMZB.Services
             //多租户会用到这init代码，其他情况可以不用
             //base.Init(dbRepository);
         }
-  }
+
+        public override PageGridData<ICD_10_Code> GetPageData(PageDataOptions pageData)
+        {
+            //增加查询条件
+            base.QueryRelativeExpression = (IQueryable<ICD_10_Code> fun) =>
+            {
+                return fun.Where(x => 1 == 1);
+            };
+            return base.GetPageData(pageData);          
+        }
+    }
 }
